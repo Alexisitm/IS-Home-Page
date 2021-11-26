@@ -181,3 +181,31 @@ p{
     width: 30em;
 
 }
+
+.Titulo-noticia{
+    color: #000;
+    font-family: 'Pacifico';
+    display: flex;
+    justify-content: flex-start;
+}
+
+.parrafo-black{
+    color: #000;
+    font-family: 'Roboto';
+    font-size: .6em;
+    display: flex;
+    justify-content: flex-start;
+}
+
+hr {
+   color: #000;
+    width: 55em;
+  }
+
+.img-n{
+    border-radius: 20px;
+    width: 15em;
+    height: 15em;
+    background-size: cover;
+    justify-content: center; 
+}
