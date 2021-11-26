@@ -172,3 +172,12 @@ p{
 
 }
 
+.Container-noticia{
+    font-size: 2em;
+    border-radius: 20px;
+    margin: 4;
+    background-size: cover;
+    height: 8em;
+    width: 30em;
+
+}
