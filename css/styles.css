@@ -1,0 +1,174 @@
+body{
+    background-color: #fff;
+    font-size: 16px;
+    font-family: 'Roboto';
+}
+
+
+.container-r{
+    font-size: 2em;
+    border-radius: 20px;
+    margin: 4;
+    background-size: cover;
+    height: 65vh;
+}
+
+.container-r-r{
+    font-size: 2em;
+    border-radius: 20px;
+    margin: 4;
+    background-size: cover;
+    height: 65vh;
+}
+
+.container-r-tall{
+    font-size: 2em;
+    border-radius: 20px;
+    margin: 4;
+    background-size: cover;
+}
+
+.container-r-small{
+    font-size: 2em;
+    border-radius: 20px;
+    margin: 4;
+    background-size: cover;
+}
+.container-r-wide{
+    font-size: 2em;
+    border-radius: 20px;
+    margin: 4;
+    min-width: 50%;
+    height: auto;
+    background-size: cover;
+}
+
+
+@media screen and (min-width: 600px) {
+    .container-r-mob{
+        max-height: 10vh;
+    }
+}
+
+.titulo{
+    color: #fff;
+    font-family: 'Pacifico';
+    display: flex;
+    justify-content: flex-start;
+}
+
+.titulo-black{
+    color: #000;
+    font-family: 'Pacifico';
+    font-size: 300%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+p{
+    color: #fff;
+    font-family: 'Roboto';
+    font-size: .6em;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.grid-conocenos{
+    display: grid;
+    grid-template-columns: 50vw 25vw 25vw;
+}
+
+.grid-torneos{
+    display: grid;
+    grid-template-columns: 50vw 50vw;
+}
+
+.grid-galeria{
+    display: grid;
+    grid-template-rows: 50% 50%;
+}
+
+.grid-ligas{
+    display: grid;
+    grid-template-columns: 30vw 70vw;
+}
+
+.liga{
+    font-size: 2em;
+    border-radius: 50%;
+    width: 8em;
+    height: 8em;
+    background-size: cover;
+}
+
+.image-mosaic-desktop {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: auto auto auto auto auto;
+    grid-auto-rows: 240px;
+  }
+
+.card {
+    font-size: 2em;
+    color: #fff;
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+    background-size: cover;
+    
+  }
+  
+  @media screen and (min-width: 600px) {
+    .card-tall {
+      grid-row: span 2 / auto;
+    }
+  
+    .card-wide {
+      grid-column: span 2 / auto;
+    }
+  }
+
+  footer{
+      background-color: #F8F9FA;
+      display: flex;
+      align-items: center;
+      align-content: center;
+      justify-content: center;
+      height: 20vh;
+      margin-top:calc( 1rem * 3);
+  }
+
+
+  .container-rr-small{
+    border-radius: 20px;
+    width: 15em;
+    height: 15em;
+    background-size: cover;
+    justify-content: center;
+}
+
+.logo{
+    font-size: 2em;
+    border-radius: 50%;
+    width: 2.5em;
+    height: 2.5em;
+    background-size: cover;
+}
+
+.btn{
+    justify-content: end;
+    display: flex;
+    float: right;
+    width: 8.5em;
+    height: 2.5em;
+}
+
+.Container-big{
+    font-size: 2em;
+    border-radius: 20px;
+    margin: 4;
+    background-size: cover;
+    height: 9em;
+
+}
+

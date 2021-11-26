@@ -1,0 +1,114 @@
+body{
+    background-color: #fff;
+}
+
+.row{
+    background-color: white;
+    justify-content: flex-start;
+}
+
+
+.titulo{
+    color: #fff;
+    font-family: 'Pacifico';
+    display: flex;
+    justify-content: flex-start;
+    position: absolute; 
+}
+
+
+.img-fluid-r{
+    border-radius: 20px;
+}
+
+.titulo1{
+    color: #fff;
+    font-family: 'Pacifico';
+    display: flex;
+    justify-content: flex-start;
+
+}
+
+
+.titulo-black{
+    color: #000;
+    font-family: 'Pacifico';
+    font-size: 300%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.liga{
+    font-size: 2em;
+    border-radius: 50%;
+    width: 8em;
+    height: 8em;
+    background-size: cover;
+}
+
+.container-r{
+    font-size: 2em;
+    border-radius: 20px;
+    margin: 4;
+    background-size: cover;
+    height: 65vh;
+}
+
+.grid-galeria{
+    display: grid;
+    grid-template-rows: 50% 50%;
+}
+
+.grid-torneos{
+    display: grid;
+    grid-template-columns: 50vw 50vw;
+}
+
+.container-r-small{
+    font-size: 2em;
+    border-radius: 20px;
+    margin: 4;
+    background-size: cover;
+}
+
+.container-r{
+    font-size: 2em;
+    border-radius: 20px;
+    margin: 4;
+    background-size: cover;
+    height: 65vh;
+}
+
+
+p{
+    color: #fff;
+    font-family: 'Roboto';
+    font-size: .6em;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.titulo-m{
+    color: #fff;
+    font-family: 'Pacifico';
+    display: flex;
+    justify-content: flex-start;
+}
+
+footer{
+    background-color: #F8F9FA;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    height: 20vh;
+    margin-top:calc( 1rem * 3);
+}
+
+
+.image-mosaic-desktop {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: auto auto auto auto auto;
+    grid-auto-rows: 240px;
+  }
