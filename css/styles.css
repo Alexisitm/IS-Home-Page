@@ -13,13 +13,6 @@ body{
     height: 65vh;
 }
 
-.container-r-r{
-    font-size: 2em;
-    border-radius: 20px;
-    margin: 4;
-    background-size: cover;
-    height: 65vh;
-}
 
 .container-r-tall{
     font-size: 2em;
@@ -41,6 +34,19 @@ body{
     min-width: 50%;
     height: auto;
     background-size: cover;
+}
+
+.bg-primario{
+
+}
+.bg-secundario{
+    
+}
+.bg-terciario{
+    
+}
+.bg-cuarto{
+    
 }
 
 
