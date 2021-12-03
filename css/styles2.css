@@ -1,20 +1,26 @@
 body{
     background-color: #fff;
-    font-size: 16px;
+    font-size: 2.5vw;
     font-family: 'Roboto';
+}
+
+/*COMPONENTS*/
+section,nav{
+    padding-top: 2em !important;
     padding-left: 2em;
     padding-right: 2em;
 }
 
-/*COMPONENTS*/
-section{
-    padding-top: 1em !important;
-}
-
 .container-r{
-    font-size: 2em;
     border-radius: 1em;
     background-size: cover;
+    width: auto;
+    height: auto;
+}
+
+.container-text{
+    display: flex;
+    flex-flow: column wrap;
 }
 
 .container-wide{
@@ -23,8 +29,9 @@ section{
 }
 
 .container-tall{
-    width: 50%;
+    width: 80%;
     height: 100%;
+    justify-self: center;
 }
 
 .container-big{
@@ -33,61 +40,352 @@ section{
 }
 
 .container-circle{
-    border-radius: 50px;
+    border-radius: 50%;
     background-size: cover;
+    width: 10em;
+    height: 10em;
 }
 
 .logo{
     background-image: url('/assets/images/beismich.jpeg');
+    background-size: cover;
     width: 5em;
     height: 5em;
+    border-radius: 50%;
 }
 
 .encabezado{
     color: #fff;
     font-family: 'Pacifico';
+    font-size: 3em;
     padding-top: 1em;
     padding-left: 1em;
 }
 
+.encabezado-black{
+    color: #000;
+    font-family: 'Pacifico';
+    font-size: 2em;
+}
+
 .parrafo-white{
-    font-size: 0.7em;
+    font-size: 1.5em;
     font-weight: 100;
     color: #fff;
-    padding: 1em;
+    padding: 2em;
 }
+
+.titulo{
+    color: #000;
+    font-family: 'Pacifico',cursive;
+    font-size: 4em;
+    display: flex;
+    justify-content: center;
+}
+
+footer{
+    background-color: #F8F9FA;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 15vh;
+    margin-top:calc( 1rem * 3);
+}
+
+.bg-primario{
+    background-color: #174377;
+}
+.bg-secundario{
+    background-color: #C7011C;
+}
+.bg-terciario{
+    background-color: #CAA97E;
+}
+.bg-cuarto{
+    background-color: #3C4A1E;
+}
+
+.img-c-90{
+    background-position: center 90%;
+}
+
+@media screen and (max-width: 600px) {
+    .container-r{
+        border-radius: .7em;
+    }
+
+    .encabezado{
+        font-size: 1.4em;
+    }
+
+    .titulo{
+        font-size: 2em;
+    }
+
+    .contactanos a > img{
+        width: 3em;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .parrafo-white{
+        font-size: .8em;
+    }
+
+    .container-circle{
+        width: 8em;
+        height: 8em;
+    }
+}
+
 /*-----------*/
 
 /*Inicio*/
 #banner-inicio{
     background-image: url('/assets/images/banner.jpg');
-    height: 15em;
+    height: 70vh;
 }
 
 .grid-conocenos{
     display: grid;
-    grid-template-columns: 50% 25% 25%;
+    grid-template-columns: 60% 40%;
+    height: fit-content;
 }
 
-.grid-conocenos-galeria{
+.conocenos-galeria{
     display: grid;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-bottom: 1em;
+    gap: 1em;
+    grid-template-columns: 50% 50%;
     grid-template-rows: 50% 50%;
 }
 
 #conocenos-img-1{
-    background-image: url('/assets/images/amanda-wolbert-YzKbXZtidT4-unsplash.jpg');
+    background-image: url('/assets/images/ryan-hoffman-EkfshnGbZVA-unsplash.jpg');
+    grid-row: 1/span 2;
 }
 #conocenos-img-2{
-    background-image: url('/assets/images/amanda-wolbert-YzKbXZtidT4-unsplash.jpg');
+    background-image: url('/assets/images/caleb-mullins-Nwp39hZa1Q0-unsplash.jpg');
 }
 #conocenos-img-3{
-    background-image: url('/assets/images/amanda-wolbert-YzKbXZtidT4-unsplash.jpg');
+    background-image: url('/assets/images/ben-hershey-qegSxvH9U9Y-unsplash.jpg');
 }
 
+.ligas-grupo{
+    display: grid;
+    grid-template-rows: 100%;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    padding-top: 5%;
+}
+.ligas-item{
+    justify-self: center;
+}
 
-@media screen and (max-width: 610px) {
+#logo-liga-1{
+    background-image: url('/assets/images/logos/tarasca.jpeg');
+}
+#logo-liga-2{
+    background-image: url('/assets/images/logos/amigoscupatizio.jpeg');
+}
+#logo-liga-3{
+    background-image: url('/assets/images/logos/purepechas.jpeg');
+}
+#logo-liga-4{
+    background-image: url('/assets/images/logos/ariense.jpeg');
+}
+#logo-liga-5{
+    background-image: url('/assets/images/logos/purepecha.jpeg');
+}
+
+.grid-torneos{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 1em;
+    width: fit-content;
+    height: fit-content;
+}
+
+.torneos-galeria{
+    display: grid;
+    grid-template-rows: 50% 50%;
+    padding-bottom: 1em;
+    gap: 1em;
+}
+
+#torneos-img-1{
+    background-image: url('/assets/images/jakob-rosen-BEfJ3nJ41LU-unsplash.jpg');
+}
+
+#torneos-img-2{
+    background-image: url('/assets/images/nathan-shively-fVfxRfkvsG0-unsplash.jpg');
+}
+
+.image-mosaic{
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: auto auto auto auto auto;
+    grid-auto-rows: 240px;
+  }
+
+.card {
+    font-size: 2em;
+    color: #fff;
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+    background-size: cover;
+    
+  }
+  
+  @media screen and (min-width: 600px) {
+    .card-tall {
+        grid-row: span 2 / auto;
+    }
+    
+    .card-wide {
+        grid-column: span 2 / auto;
+    }
+  }
+
+@media screen and (max-width: 600px) {
+    #banner-inicio{
+        height: 30vh;
+    }
+    .image-mosaic{
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        grid-auto-rows: 240px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .ligas-grupo{
+        grid-template-rows: 40% 40% 40%;
+        grid-template-columns: 50% 50%;
+        gap: 1em;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .grid-conocenos{
+        grid-template-columns: 100%;
+        grid-template-rows: auto 50vh;
+        gap: 1em;
+    }
+
+    .conocenos-galeria{
+        padding-left: 0em;
+        padding-right: 0em;
+        padding-bottom: 1em;
+        gap: 0em;
+        row-gap: 1em;
+    }
+
+    #conocenos-img-1{
+        width: 90%;
+        justify-self: start;
+    }
+
+    .grid-torneos{
+        grid-template-columns: 100%;
+        grid-template-rows: 50vh auto;
+    }
+}
+/*-----------*/
+
+/*Ligas*/
+.liga{
+    display: grid;
+    grid-template-columns: 30% 70%;
+    padding-top: 2em;
+}
+
+.liga-logo{
+    justify-self: center;
+    align-self: center;
+    width: 15em;
+    height: 15em;
+}
+
+.liga-info{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.btn-equipos{
+    display: flex;
+    justify-content: flex-end;
+    padding: 1em;
+}
+
+@media screen and (max-width: 1000px) {
+    .liga-logo{
+        width: 10em;
+        height: 10em;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .liga-logo{
+        width: 6em;
+        height: 6em;
+    }
+
+    .btn-equipos, .liga-info{
+        display: flex;
+        justify-content: center;
+    }
     
 }
+/*-----------*/
 
+/*Noticias*/
+.container-noticia{
+    display: flex;
+    flex-flow: column wrap;
+    align-items: flex-start;
+    justify-content: center;
 
+}
+
+.img-n{
+    width: 15em;
+    height: 15em;
+    background-size: cover;
+}
+
+.fecha-autor{
+    font-weight: bold;
+}
+
+@media screen and (max-width: 800px) {
+    .img-n{
+        width: 50em;
+    }
+
+    .container-noticia{
+        align-items: center;
+        text-align: center;
+        padding-top: 1em;
+    }
+}
+/*-----------*/
+
+/*Contacto*/
+#banner-contacto{
+    background-image: url('/assets/images/parael404.jpg');
+    height: 50vh;
+    background-position: center 90%;
+}
+@media screen and (max-width: 600px) {
+    #banner-contacto{
+        height: 30vh;
+    }
+}
 /*-----------*/
