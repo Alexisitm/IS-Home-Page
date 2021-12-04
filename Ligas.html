@@ -57,218 +57,43 @@
 
   <section>
     <h2 class="titulo"> Nuestras Ligas</h2>
-    <!--Liga-->
-    <div class="liga" id="">
-      <div class="container-circle liga-logo" style="background-image: url(/assets/images/logos/tarasca.jpeg);"></div>
-      <div class="container-r container-big bg-primario">
-        <div class="liga-info">
-          <h2 class="encabezado">Liga pequeña tarasca</h2>
-          <p class="parrafo-white">
-            Dirección, Localidad <br>
-            Edad mínima - Edad máxima <br>
-            Responsable - teléfono <br>
-          </p>
-          <div class="btn-equipos">
-            <button class="btn btn-outline-light ps-5 pe-5 pt-2 pb-2">Equipos</button>
-          </div>
-        </div>
-
-      </div>
-    </div>
-    <!--Liga-->
-    <div class="liga" id="">
-      <div class="container-circle liga-logo" style="background-image: url(/assets/images/logos/amigoscupatizio.jpeg);">
-      </div>
-      <div class="container-r container-big bg-secundario">
-        <div class="liga-info">
-          <h2 class="encabezado">Liga Amigos del Cupatizio</h2>
-          <p class="parrafo-white">
-            Dirección, Localidad <br>
-            Edad mínima - Edad máxima <br>
-            Responsable - teléfono <br>
-          </p>
-          <div class="btn-equipos">
-            <button class="btn btn-outline-light ps-5 pe-5 pt-2 pb-2">Equipos</button>
-          </div>
-        </div>
-
-      </div>
-    </div>
-    <!--Liga-->
-    <div class="liga" id="">
-      <div class="container-circle liga-logo" style="background-image: url(/assets/images/logos/purepechas.jpeg);">
-      </div>
-      <div class="container-r container-big bg-terciario">
-        <div class="liga-info">
-          <h2 class="encabezado">Liga purepechas</h2>
-          <p class="parrafo-white">
-            Dirección, Localidad <br>
-            Edad mínima - Edad máxima <br>
-            Responsable - teléfono <br>
-          </p>
-          <div class="btn-equipos">
-            <button class="btn btn-outline-light ps-5 pe-5 pt-2 pb-2">Equipos</button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!--Liga-->
-    <div class="liga" id="">
-      <div class="container-circle liga-logo" style="background-image: url(/assets/images/logos/ariense.jpeg);"></div>
-      <div class="container-r container-big bg-cuarto">
-        <div class="liga-info">
-          <h2 class="encabezado">Liga Ariense</h2>
-          <p class="parrafo-white">
-            Dirección, Localidad <br>
-            Edad mínima - Edad máxima <br>
-            Responsable - teléfono <br>
-          </p>
-          <div class="btn-equipos">
-            <button class="btn btn-outline-light ps-5 pe-5 pt-2 pb-2">Equipos</button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!--Liga-->
-    <div class="liga" id="">
-      <div class="container-circle liga-logo" style="background-image: url(/assets/images/logos/purepecha.jpeg);"></div>
-      <div class="container-r container-big bg-primario">
-        <div class="liga-info">
-          <h2 class="encabezado">Liga Purepecha</h2>
-          <p class="parrafo-white">
-            Dirección, Localidad <br>
-            Edad mínima - Edad máxima <br>
-            Responsable - teléfono <br>
-          </p>
-          <div class="btn-equipos">
-            <button class="btn btn-outline-light ps-5 pe-5 pt-2 pb-2">Equipos</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
   </section>
 
-  <!--Liga BMAC
-    <section>
-      <div class="grid-ligas">
-        <div class="container-fluid d-flex justify-content-around mt-5 mr-5">
-          <div class="liga" style="background-image: url(./assets/images/logo.png)"></div>
+  <section id="Lista-ligas">
+
+    <div v-for="item in todo">
+      <!--Liga-->
+      <div class="liga" v-bind:id="item.nombre">
+        <div class="container-circle liga-logo" v-bind:style="item.logojpg"></div>
+        <div class="container-r container-big" v-bind:class="item.bg">
+          <div class="liga-info">
+            <h2 class="encabezado">{{item.nombre}}</h2>
+            <p class="parrafo-white">
+              {{item.info.direccion}}<br>
+              De {{item.info.edadMinima}} a {{item.info.edadMaxima}} años<br>
+              Responsable: {{item.info.nombreResponsable}}<br>
+              Contacto: {{item.info.telefonoResponsable}}<br>
+            </p>
+            <div class="btn-equipos">
+              <a class="btn btn-outline-light ps-5 pe-5 pt-2 pb-2" v-bind:href="item.id">Equipos</a>
+            </div>
+          </div>
         </div>
-            <div class="container-r-small m-5 bg-primary">
-                <h2 class="titulo p-5">Liga BMAC</h2>
-                <p class="ps-5 pe-5">
-                    Direccion: Calle, Num, Col  
-                </p>
-                <p class="ps-5 pe-5">
-                  Edad maxima: Edad Minima 
-                </p>
-                <p class="ps-5 pe-5">
-                  Responsable: 
-                </p>
-                <div class="container-sm">
-                <button type="button" class="btn btn-outline-light mb-4 me-4">Equipos</button>
-              </div>
-              </div>
       </div>
-    </section>-->
+    </div>
+  </section>
 
-  <!--Liga Cupatizio
-        <section>
-          <div class="grid-ligas">
-            <div class="container-fluid d-flex justify-content-around mt-5 mr-5">
-              <div class="liga" style="background-image: url(./assets/images/cupatizio.jpeg)"></div>
-            </div>
-                <div class="container-r-small m-5 bg-danger">
-                  <h2 class="titulo p-5">Liga Cupatizio</h2>
-                  <p class="ps-5 pe-5">
-                      Direccion: Calle, Num, Col  
-                  </p>
-                  <p class="ps-5 pe-5">
-                    Edad maxima: Edad Minima 
-                  </p>
-                  <p class="ps-5 pe-5">
-                    Responsable: 
-                  </p>
-                  <button type="button" class="btn btn-outline-light mb-4 me-4">Equipos</button>
-              </div>
-          </div>
-        </section>-->
 
-  <!--Liga Beismich
-    <section>
-      <div class="grid-ligas">
-        <div class="container-fluid d-flex justify-content-around mt-5 mr-5">
-          <div class="liga" style="background-image: url(./assets/images/beismich.jpeg)"></div>
-        </div>
-            <div class="container-r-small m-5 bg-secondary">
-              <h2 class="titulo p-5">Liga Beismich</h2>
-              <p class="ps-5 pe-5">
-                  Direccion: Calle, Num, Col  
-              </p>
-              <p class="ps-5 pe-5">
-                Edad maxima: Edad Minima 
-              </p>
-              <p class="ps-5 pe-5">
-                Responsable: 
-              </p>
-              <button type="button" class="btn btn-outline-light mb-4 me-4">Equipos</button>
-          </div>
-      </div>
-    </section>-->
-
-  <!--Liga Purepecha
-        <section>
-          <div class="grid-ligas">
-            <div class="container-fluid d-flex justify-content-around mt-5 mr-5">
-              <div class="liga" style="background-image: url(./assets/images/purepecha.jpeg)"></div>
-            </div>
-                <div class="container-r-small m-5 bg-success">
-                  <h2 class="titulo p-5">Liga Purepecha</h2>
-                  <p class="ps-5 pe-5">
-                      Direccion: Calle, Num, Col  
-                  </p>
-                  <p class="ps-5 pe-5">
-                    Edad maxima: Edad Minima 
-                  </p>
-                  <p class="ps-5 pe-5">
-                    Responsable: 
-                  </p>
-                  <button type="button" class="btn btn-outline-light mb-4 me-4">Equipos</button>
-              </div>
-          </div>
-        </section>-->
-
-  <!--Liga Purepecha
-        <section>
-          <div class="grid-ligas">
-            <div class="container-fluid d-flex justify-content-around mt-5 mr-5">
-              <div class="liga" style="background-image: url(./assets/images/TarascaLogo.jpeg)"></div>
-            </div>
-                <div class="container-r-small m-5 bg-success">
-                  <h2 class="titulo p-5">Liga Tarasca</h2>
-                  <p class="ps-5 pe-5">
-                      Direccion: Calle, Num, Col  
-                  </p>
-                  <p class="ps-5 pe-5">
-                    Edad maxima: Edad Minima 
-                  </p>
-                  <p class="ps-5 pe-5">
-                    Responsable: 
-                  </p>
-                  <button type="button" class="btn btn-outline-light mb-4 me-4">Equipos</button>
-              </div>
-          </div>
-        </section>-->
-
-        <footer>
-          <div>Asociación de Besbolistas michoacanos</div>
-      </footer>
+  <footer>
+    <div>Asociación de Besbolistas michoacanos</div>
+  </footer>
 
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
     crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  <script src="/js/index.js"></script>
 </body>
 
 </html>

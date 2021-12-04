@@ -54,94 +54,28 @@
         </nav>
     </header>
 
+    <section>
+        <h2 class="titulo">Torneos</h2>
+    </section>
+
     <!--Torneos-->
     <section>
-        <h2 class="titulo"> Torneos</h2>
-        <div class="grid">
-            <!--Contenedor-->
+        <div class="grid" id="torneos">
+            <!--Torneo-->
             <div class="row">
-                <div class="col-lg-6">
-                    <!--Torneo-->
+                <div class="col-lg-6" v-bind:id="item.id" v-for="item in todo">
                     <div class="container-r Container-big bg-primary justify-content-center mb-4">
-                        <h2 class="encabezado d-flex justify-content-center mb-5 p-5">Nombre torneo</h2>
+                        <h2 class="encabezado d-flex justify-content-center mb-5 p-5">{{item.titulo}}</h2>
                         <div class="grid">
                             <div class="d-flex justify-content-center">
-                                <a class="parrafo-white" href="">Calendario de Juegos</a>
-                                <a class="parrafo-white" href="">Resultados</a>
+                                <a class="parrafo-white" v-bind:href="item.calendario">Calendario </a>
+                                <a class="parrafo-white" v-bind:href="item.resultados">Resultados</a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6">
-                    <!--Torneo-->
-                    <div class="container-r Container-big bg-primary justify-content-center mb-4">
-                        <h2 class="encabezado d-flex justify-content-center mb-5 p-5">Nombre torneo</h2>
-                        <div class="grid">
-                            <div class="d-flex justify-content-center">
-                                <a class="parrafo-white" href="">Calendario de Juegos</a>
-                                <a class="parrafo-white" href="">Resultados</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
             </div>
-            <div class="row">
-                <div class="col-lg-6">
-                    <!--Torneo-->
-                    <div class="container-r Container-big bg-primary justify-content-center mb-4">
-                        <h2 class="encabezado d-flex justify-content-center mb-5 p-5">Nombre torneo</h2>
-                        <div class="grid">
-                            <div class="d-flex justify-content-center">
-                                <a class="parrafo-white" href="">Calendario de Juegos</a>
-                                <a class="parrafo-white" href="">Resultados</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <!--Torneo-->
-                    <div class="container-r Container-big bg-primary justify-content-center mb-4">
-                        <h2 class="encabezado d-flex justify-content-center mb-5 p-5">Nombre torneo</h2>
-                        <div class="grid">
-                            <div class="d-flex justify-content-center">
-                                <a class="parrafo-white" href="">Calendario de Juegos</a>
-                                <a class="parrafo-white" href="">Resultados</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
-            </div>
-            <div class="row">
-                <div class="col-lg-6">
-                    <!--Torneo-->
-                    <div class="container-r Container-big bg-primary justify-content-center mb-4">
-                        <h2 class="encabezado d-flex justify-content-center mb-5 p-5">Nombre torneo</h2>
-                        <div class="grid">
-                            <div class="d-flex justify-content-center">
-                                <a class="parrafo-white" href="">Calendario de Juegos</a>
-                                <a class="parrafo-white" href="">Resultados</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <!--Torneo-->
-                    <div class="container-r Container-big bg-primary justify-content-center mb-4">
-                        <h2 class="encabezado d-flex justify-content-center mb-5 p-5">Nombre torneo</h2>
-                        <div class="grid">
-                            <div class="d-flex justify-content-center">
-                                <a class="parrafo-white" href="">Calendario de Juegos</a>
-                                <a class="parrafo-white" href="">Resultados</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <!--Fin Contenedor-->
-            
     </section>
     <footer>
         <div>Asociación de Besbolistas michoacanos</div>
@@ -150,6 +84,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="/js/index.js"></script>
 </body>
 
 </html>
