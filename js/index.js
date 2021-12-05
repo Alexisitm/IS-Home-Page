@@ -1,10 +1,3 @@
-const app = new Vue({
-    el: '#app',
-    data: {
-        message: 'Hello Vue!'
-    }
-})
-
 const liga = new Vue({
     el: '#Lista-ligas',
     data: {
