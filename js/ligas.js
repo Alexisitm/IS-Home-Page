@@ -22,7 +22,7 @@ const renderLigas = (data) => {
                 },
                 logojpg: `background-image: url(${liga.logo_liga}) ;`,
                 bg: bg[index++],
-                equiposLink: `http://127.0.0.1:8000/api/ligas/${liga.id}/equipos/`,
+                equiposLink: `/Equipos.html?liga=${liga.id}`,
         }
         ligas.push(tmp);
     })

@@ -13,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@100&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./bootstrap-5.1.3-dist/css/bootstrap.css">
-    <title>Equipos</title>
+    <title>Roster</title>
 </head>
 
 <body>
@@ -53,24 +53,39 @@
         </nav>
     </header>
 
-    <section>
-        <div class="grid-equipos">
-            <div id="Liga">
-                <div class="liga-encabezado d-flex justify-content-center" v-for="item in todo">
-                    <h2 class="titulo">{{item.nombre}}</h2>
-                    <div class="container-circle" v-bind:style="item.logoLiga"></div>
-                </div>
-            </div>
-            <div id="Tabla-equipos">
-                <div class="container-encabezado"><p>Equipos</p></div>
-                <div class="table">
-                    <ul class="list-group" v-for="item in todo">
-                        <li class="list-group-item"><a v-bind:href="item.rosterLink">{{item.nombre}}</a></li>
-                    </ul>
-                </div>
-            </div>
+    <section id="Equipo">
+        <div class="equipo-encabezado" v-for="item in todo">
+            <h2 class="titulo">{{item.nombre}}</h2>
+            <div class="container-circle" v-bind:style="item.logoEquipo"></div>
         </div>
     </section>
+
+    <section id="Entrenador">
+        <div class="container-r container-entrenador" v-for="item in todo">
+            <h3 class="encabezado encabezado-blue">Entrenador</h3>
+            <p class="parrafo-black">{{item.nombre}}</p>
+        </div>
+    </section>
+
+    <section id="Roster">
+        <div class="roster container-r">
+            <div class="roster-encabezado bg-primario">
+                <h3>Roster</h3>
+            </div>
+            <table>
+                <tr>
+                  <th>Jugador</th>
+                  <th>Posicion</th>
+                </tr>
+                <tr v-for="item in todo">
+                  <td>{{item.nombre}}</td>
+                  <td>{{item.posicion}}</td>
+                </tr>
+              </table>
+        </div>
+        
+    </section>
+
 
     <footer >
         <div>Asociación de Besbolistas michoacanos</div>
@@ -82,7 +97,7 @@
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <script src="/js/index.js"></script>
-    <script src="/js/equipos.js"></script>
+    <script src="/js/roster.js"></script>
 </body>
 
 </html>
