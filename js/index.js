@@ -1,4 +1,4 @@
-const liga = new Vue({
+/*const liga = new Vue({
     el: '#Lista-ligas',
     data: {
         todo: [
@@ -74,10 +74,10 @@ const liga = new Vue({
             },
         ]
     }
-})
+})*/
 
 
-const torneos = new Vue({
+/*const torneos = new Vue({
     el: '#torneos',
     data: {
         todo: [
@@ -119,11 +119,11 @@ const torneos = new Vue({
             },
         ]
     }
-})
+})*/
 
-const noticias = new Vue({
+/*const noticias = new Vue({
     el: '#noticias',
-    data:{
+    data: {
         todo: [
             {
                 id: '1',
@@ -151,4 +151,4 @@ const noticias = new Vue({
             },
         ]
     }
-})
+})*/

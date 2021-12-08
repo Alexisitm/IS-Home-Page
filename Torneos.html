@@ -16,11 +16,11 @@
 </head>
 
 <body>
-    <!--Barra Superior-->
+    <!--Navbar-->
     <header>
         <nav class="navbar navbar-expand-sm navbar-light bg-white">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="/Inicio.html">
                     <img class="logo">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-options"
@@ -47,9 +47,7 @@
                             </li>
                         </ul>
                     </div>
-
                 </div>
-
             </div>
         </nav>
     </header>
@@ -68,7 +66,7 @@
                         <h2 class="encabezado d-flex justify-content-center mb-5 p-5">{{item.titulo}}</h2>
                         <div class="grid">
                             <div class="d-flex justify-content-center">
-                                <a class="parrafo-white" v-bind:href="item.calendario">Calendario </a>
+                                <a class="parrafo-white" v-bind:href="item.calendarios">Calendario </a>
                                 <a class="parrafo-white" v-bind:href="item.resultados">Resultados</a>
                             </div>
                         </div>
@@ -86,6 +84,7 @@
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <script src="/js/index.js"></script>
+    <script src="/js/torneos.js"></script>
 </body>
 
 </html>
