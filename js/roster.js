@@ -5,13 +5,15 @@ const fetchEquipo = async () => {
 }
 
 const renderEquipo = (data) => {
+    const ruta = 'http://127.0.0.1:8000/assets/images/logos-equipos/';
+    //const logo = data[0].logo_equipo.replaceAll(' ',"%20")
     new Vue({
         el: '#Equipo',
         data: {
             todo: [
                 {
                     nombre: data[0].nombre_equipo,
-                    logoEquipo: data[0].logo_equipo != null ? `background-image: url(${data[0].logo_equipo});` : `background-image: url('/assets/images/kendall-scott-rYi3ZpupNlM-unsplash.jpg');`,
+                    logoEquipo: data[0].logo_equipo != null ? `background-image: url(${ruta}${data[0].logo_equipo.replaceAll(' ',"%20")});` : `background-image: url('/assets/images/kendall-scott-rYi3ZpupNlM-unsplash.jpg');`,
                 }
             ]
         }

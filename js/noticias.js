@@ -3,6 +3,8 @@ const fetchNoticias = async () => {
 }
 
 const renderNoticias = (data) => {
+
+    const ruta = 'http://127.0.0.1:8000/assets/images/noticias/';
     const noticias = [];
 
     data.forEach(noticia => {
@@ -12,7 +14,7 @@ const renderNoticias = (data) => {
             fecha: noticia.fecha_noticia,
             autor: `${noticia.nombre_autor} ${noticia.apaterno_autor} ${noticia.amaterno_autor ? `${liga.amaterno_autor}` : ''} `,
             descripcion: noticia.descripcion,
-            portada: `background-image: url(${noticia.portada});`,
+            portada: `background-image: url(${ruta}${noticia.portada});`,
         }
         noticias.push(tmp);
     })

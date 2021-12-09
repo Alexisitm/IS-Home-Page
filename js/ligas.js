@@ -3,12 +3,15 @@ const fetchLigas = async () => {
 }
 
 const renderLigas = (data) => {
+
+    const ruta = 'http://127.0.0.1:8000/assets/images/logos-ligas/';
     const bg = ['bg-primario','bg-secundario','bg-terciario','bg-cuarto']
     let index = 0
     const ligas = [];
 
     data.forEach(liga => {
         index = index < bg.length ? index : 0;
+        const logo = liga.logo_liga.replaceAll(' ',"%20")
         const tmp = {
             id: liga.id,
                 nombre: liga.nombre_liga,
@@ -20,7 +23,7 @@ const renderLigas = (data) => {
                     nombreResponsable: `${liga.nombre_responsable} ${liga.apaterno_responsable} ${liga.amaterno_responsable ? `${liga.amaterno_responsable}` : ''} `,
                     telefonoResponsable: liga.telefono_responsable
                 },
-                logojpg: `background-image: url(${liga.logo_liga}) ;`,
+                logojpg: `background-image: url(${ruta}${logo}) ;`,
                 bg: bg[index++],
                 equiposLink: `/Equipos.html?liga=${liga.id}`,
         }

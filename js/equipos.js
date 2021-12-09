@@ -4,13 +4,15 @@ const fetchLiga = async () => {
     return await (await fetch(`http://127.0.0.1:8000/api/ligas/${params.liga}`)).json()
 }
 const renderLiga = (data) => {
+    const ruta = 'http://127.0.0.1:8000/assets/images/logos-ligas/';
+    const logo = data[0].logo_liga.replaceAll(' ',"%20")
     new Vue({
         el: '#Liga',
         data: {
             todo: [
                 {
                     nombre: data[0].nombre_liga,
-                    logoLiga: `background-image: url(${data[0].logo_liga}) ;`,
+                    logoLiga: `background-image: url(${ruta}${logo}) ;`,
                 }
             ]
         }
