@@ -30,7 +30,7 @@ const renderEntrenador = (data) => {
         data: {
             todo: [
                 {
-                    nombre: data[0].nombre_entrenador,
+                    nombre: `${data[0].nombre_entrenador} ${data[0].apaterno_entrenador}`,
                 }
             ]
         }

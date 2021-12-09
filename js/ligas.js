@@ -13,7 +13,7 @@ const renderLigas = (data) => {
             id: liga.id,
                 nombre: liga.nombre_liga,
                 info: {
-                    direccion: liga.localidad,
+                    direccion: `${liga.localidad} #${liga.numero}`,
                     localidad: liga.ciudad,
                     edadMinima: liga.edad_minima,
                     edadMaxima: liga.edad_maxima,

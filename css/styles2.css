@@ -474,7 +474,11 @@ footer{
 .encabezado-blue{
     color: #174377 !important;
     font-size: 1.5em;
+    text-align: center;
+}
 
+.container-entrenador p{
+    text-align: center;
 }
 
 .roster{
@@ -496,6 +500,7 @@ table{
     text-align: center;
     font-family: Pacifico;
 }
+
 
 @media screen and (max-width:850px) {
     #Entrenador{
