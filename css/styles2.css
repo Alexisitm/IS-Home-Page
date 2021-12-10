@@ -94,7 +94,7 @@ footer{
 }
 
 .bg-primario{
-    background-color: #174377;
+    background-color: #174377 !important;
 }
 .bg-secundario{
     background-color: #C7011C;
@@ -389,6 +389,11 @@ footer{
     height: 50vh;
     background-position: center 90%;
 }
+
+#hoja-registro{
+    height: 10vh;
+}
+
 @media screen and (max-width: 600px) {
     #banner-contacto{
         height: 30vh;

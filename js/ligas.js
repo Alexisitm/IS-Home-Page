@@ -16,11 +16,11 @@ const renderLigas = (data) => {
             id: liga.id,
                 nombre: liga.nombre_liga,
                 info: {
-                    direccion: `${liga.localidad} #${liga.numero}`,
+                    direccion: `${liga.localidad} ${liga.numero ? '#'+liga.numero : ''}`,
                     localidad: liga.ciudad,
                     edadMinima: liga.edad_minima,
                     edadMaxima: liga.edad_maxima,
-                    nombreResponsable: `${liga.nombre_responsable} ${liga.apaterno_responsable} ${liga.amaterno_responsable ? `${liga.amaterno_responsable}` : ''} `,
+                    nombreResponsable: `${liga.nombre_responsable} ${liga.apaterno_responsable ? `${liga.apaterno_responsable}` : ''} ${liga.amaterno_responsable ? `${liga.amaterno_responsable}` : ''} `,
                     telefonoResponsable: liga.telefono_responsable
                 },
                 logojpg: `background-image: url(${ruta}${logo}) ;`,
