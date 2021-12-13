@@ -1,5 +1,5 @@
 const fetchTorneos = async () => {
-    return await (await fetch('http://127.0.0.1:8000/api/torneos')).json()
+    return await (await fetch('http://morning-tundra-87209.herokuapp.com/api/torneos')).json()
 }
 
 const renderTorneos = (data) => {

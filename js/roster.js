@@ -1,11 +1,11 @@
 const fetchEquipo = async () => {
     const urlSearchParams = new URLSearchParams(window.location.search);
     const params = Object.fromEntries(urlSearchParams.entries());
-    return await (await fetch(`http://127.0.0.1:8000/api/ligas/${params.liga}/equipos/${params.equipo}`)).json()
+    return await (await fetch(`http://morning-tundra-87209.herokuapp.com/api/ligas/${params.liga}/equipos/${params.equipo}`)).json()
 }
 
 const renderEquipo = (data) => {
-    const ruta = 'http://127.0.0.1:8000/assets/images/logos-equipos/';
+    const ruta = 'http://morning-tundra-87209.herokuapp.com/api/ligas/assets/images/logos-equipos/';
     //const logo = data[0].logo_equipo.replaceAll(' ',"%20")
     new Vue({
         el: '#Equipo',
@@ -23,7 +23,7 @@ const renderEquipo = (data) => {
 const fetchEntrenador = async () => {
     const urlSearchParams = new URLSearchParams(window.location.search);
     const params = Object.fromEntries(urlSearchParams.entries());
-    return await (await fetch(`http://127.0.0.1:8000/api/ligas/${params.liga}/equipos/${params.equipo}/entrenador`)).json()
+    return await (await fetch(`http://morning-tundra-87209.herokuapp.com/api/ligas/${params.liga}/equipos/${params.equipo}/entrenador`)).json()
 }
 
 const renderEntrenador = (data) => {
@@ -42,7 +42,7 @@ const renderEntrenador = (data) => {
 const fetchJugadores = async () => {
     const urlSearchParams = new URLSearchParams(window.location.search);
     const params = Object.fromEntries(urlSearchParams.entries());
-    return await (await fetch(`http://127.0.0.1:8000/api/ligas/${params.liga}/equipos/${params.equipo}/jugadores`)).json()
+    return await (await fetch(`http://morning-tundra-87209.herokuapp.com/api/ligas/${params.liga}/equipos/${params.equipo}/jugadores`)).json()
 }
 
 const renderJugadores = (data) => {

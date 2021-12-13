@@ -1,10 +1,10 @@
 const fetchLiga = async () => {
     const urlSearchParams = new URLSearchParams(window.location.search);
     const params = Object.fromEntries(urlSearchParams.entries());
-    return await (await fetch(`http://127.0.0.1:8000/api/ligas/${params.liga}`)).json()
+    return await (await fetch(`http://morning-tundra-87209.herokuapp.com/api/ligas/${params.liga}`)).json()
 }
 const renderLiga = (data) => {
-    const ruta = 'http://127.0.0.1:8000/assets/images/logos-ligas/';
+    const ruta = 'http://morning-tundra-87209.herokuapp.com/assets/images/logos-ligas/';
     const logo = data[0].logo_liga.replaceAll(' ',"%20")
     new Vue({
         el: '#Liga',
@@ -22,7 +22,9 @@ const renderLiga = (data) => {
 const fetchEquipos = async () => {
     const urlSearchParams = new URLSearchParams(window.location.search);
     const params = Object.fromEntries(urlSearchParams.entries());
-    return await (await fetch(`http://127.0.0.1:8000/api/ligas/${params.liga}/equipos/`)).json()
+    return await (await fetch(`http://morning-tundra-87209.herokuapp.com/api/ligas/${params.liga}/equipos/`),{
+        method: 'GET'
+    }).json()
 }
 
 const renderEquipos = (data) => {

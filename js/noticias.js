@@ -1,10 +1,10 @@
 const fetchNoticias = async () => {
-    return await (await fetch('http://127.0.0.1:8000/api/noticias')).json()
+    return await (await fetch('http://morning-tundra-87209.herokuapp.com/api/noticias')).json()
 }
 
 const renderNoticias = (data) => {
 
-    const ruta = 'http://127.0.0.1:8000/assets/images/noticias/';
+    const ruta = 'http://morning-tundra-87209.herokuapp.com/assets/images/noticias/';
     const noticias = [];
     let pilaNoticias = []
 

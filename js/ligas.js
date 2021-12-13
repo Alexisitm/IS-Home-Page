@@ -1,10 +1,10 @@
 const fetchLigas = async () => {
-    return await (await fetch('http://127.0.0.1:8000/api/ligas')).json()
+    return await (await fetch('http://morning-tundra-87209.herokuapp.com/api/ligas')).json()
 }
 
 const renderLigas = (data) => {
 
-    const ruta = 'http://127.0.0.1:8000/assets/images/logos-ligas/';
+    const ruta = 'http://morning-tundra-87209.herokuapp.com/assets/images/logos-ligas/';
     const bg = ['bg-primario','bg-secundario','bg-terciario','bg-cuarto']
     let index = 0
     const ligas = [];
